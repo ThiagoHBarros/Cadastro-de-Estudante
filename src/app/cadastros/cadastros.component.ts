@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cadastro } from '../cadastro';
+import { CADASTROS} from '../alunos-cadastrados';
 
 @Component({
   selector: 'app-cadastros',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrosComponent implements OnInit {
 
-  cadastro = {
+   cadastro: Cadastro = {
    
     name: '',
     email: '',
@@ -15,6 +17,9 @@ export class CadastrosComponent implements OnInit {
     end: '',
     curso: ''
   };
+
+  cadastros = CADASTROS;
+ 
 
   constructor() { }
 

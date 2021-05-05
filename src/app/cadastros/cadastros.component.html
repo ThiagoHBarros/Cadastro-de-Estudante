@@ -22,4 +22,17 @@
 </div>
 
 
-  <button>Enviar</button>
+  <button type="button">Enviar</button>
+
+  <section>
+  <div class="alunosc">
+  <h2>Alunos Cadastrados</h2>
+  <ul class="Cadastrados">
+    <div *ngFor ="let cadastro of cadastros" class="curso-nome">
+      <span class="badge">{{cadastro.curso}}      
+     {{cadastro.name}}</span>
+    </div>
+  </ul>
+</div> 
+</section>
+

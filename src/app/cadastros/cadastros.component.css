@@ -41,3 +41,21 @@ button{
     margin-right: 400px;
 }
 
+.alunosc{
+    text-align: center;
+    display: block;
+    background-color:rgb(253, 46, 46);
+    width: 600px;
+    padding-bottom: 30px;   
+    margin-right: 400px;
+    margin-left: 400px;
+    color: white;
+
+}
+
+.curso-nome {
+    padding-top: 15px;
+    text-align: center;
+
+}
+

@@ -1,7 +1,7 @@
-export interface cadastro {
+export interface Cadastro {
     name: string;
     email: string;
-    telefone: number;
+    telefone: string;
     end: string;
     curso: string;
 
