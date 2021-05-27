@@ -23,11 +23,7 @@ export class CadastrosComponent implements OnInit {
   ngOnInit() {
     this.getCadastros();
   }
-        onSelect(cadastro: Cadastro): void {
-      this.selectedCadastro = cadastro;
-      this.messageService.add(`CadastrosComponent: Selected cadastro curso=${cadastro.curso}`);
-
-  }
+     
   getCadastros(): void {
     this.cadastroService.getCadastros()
     .subscribe(cadastros => this.cadastros = cadastros);

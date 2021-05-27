@@ -1,10 +1,10 @@
 <h2>Alunos Cadastrados</h2>
 
-<ul class="cadastros">
-  <li *ngFor ="let cadastro of cadastros" 
-  [class.selected]="cadastro === selectedCadastro"
-   (click)="onSelect(cadastro)">
-    <span class="badge">{{cadastro.curso}}</span>  {{cadastro.name}}
+<<ul class="cadastros">
+  <li *ngFor="let cadastro of cadastros">
+    <a routerLink="/detail/{{cadastro.id}}">
+      <span class="badge">{{cadastro.id}}</span> {{cadastro.name}}
+    </a>
   </li>
 </ul>
 

@@ -3,6 +3,6 @@ export interface Cadastro {
     email: string;
     telefone: string;
     end: string;
-    curso: string;
+    id: string;
 
   }

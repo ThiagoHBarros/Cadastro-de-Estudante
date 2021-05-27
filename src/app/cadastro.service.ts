@@ -17,5 +17,13 @@ export class CadastroService {
     return cadastros;
   }
 
+  getCadastro(id: number): Observable<Cadastro> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+    const cadastro = CADASTROS.find(c => c.id === id)!;
+    this.messageService.add(`CadastroService: fetched cadastro id=${id}`);
+    return of(cadastro);
+  }
+
 }
 

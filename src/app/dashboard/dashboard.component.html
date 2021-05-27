@@ -1,0 +1,6 @@
+<h2>Top Cadastros</h2>
+<a *ngFor="let cadastro of cadastros"
+  routerLink="/detail/{{cadastro.id}}">
+  {{cadastro.name}}
+</a>
+</div>
