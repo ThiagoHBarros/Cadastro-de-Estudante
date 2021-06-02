@@ -24,13 +24,20 @@ export class CadastroDetailComponent implements OnInit {
     }
     
     getCadastro(): void {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
+      const id = String(this.route.snapshot.paramMap.get('id'));
       this.cadastroService.getCadastro(id)
         .subscribe(cadastro => this.cadastro = cadastro);
     }
     
     goBack(): void {
       this.location.back();
+    } 
+
+    save(): void {
+      if (this.cadastro) {
+        this.cadastroService.updateCadastro(this.cadastro)
+          .subscribe(() => this.goBack());
+      }
     }
 
 }

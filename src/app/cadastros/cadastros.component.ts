@@ -29,5 +29,19 @@ export class CadastrosComponent implements OnInit {
     .subscribe(cadastros => this.cadastros = cadastros);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.cadastroService.addCadastro({ name } as Cadastro)
+      .subscribe(cadastro => {
+        this.cadastros.push(cadastro);
+      });
+  }
+
+  delete(cadastro: Cadastro): void {
+    this.cadastros = this.cadastros.filter(c => c !== cadastro);
+    this.cadastroService.deleteCadastro(cadastro.id).subscribe();
+  }
+
   
 }

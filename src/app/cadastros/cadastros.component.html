@@ -1,15 +1,23 @@
 <h2>Alunos Cadastrados</h2>
 
-<<ul class="cadastros">
+<ul class="cadastros">
   <li *ngFor="let cadastro of cadastros">
     <a routerLink="/detail/{{cadastro.id}}">
       <span class="badge">{{cadastro.id}}</span> {{cadastro.name}}
     </a>
+    <button class="delete" title="delete cadastro"
+  (click)="delete(cadastro)">x</button>
   </li>
 </ul>
+<div>
+  <label for="new-cadastro">Nome do Aluno: </label>
+  <input id="new-cadastro" #cadastroName />
+  <button class="add-button" (click)="add(cadastroName.value); cadastroName.value=''">
+    Adicionar Aluno
+  </button>
+</div>
 
 
-<app-cadastro-detail [cadastro]="selectedCadastro"></app-cadastro-detail>
 
 
    
